@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(15, 3, 26);
+}
+label, article, h2, button{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cabeçalho - início */
+.cabecalho{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    background-color: rgb(40, 9, 66);
+    padding: 1vh 0;
+}
+.cabecalho img{
+    width: 8vw;
+    margin: 0 auto;
+}
+/* Cabeçalho - fim */
+
+/* Conteudo - início */
+main{
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+}
+    /* Opcoes - início */
+    .opcoes_chat{
+        width: 20vw;
+        margin-top: 20vh;
+        display:block;
+    }
+    .modos_chat{
+        width: 100%;
+        background-color: rgb(26, 6, 44);
+        display: grid;
+        border-radius: 20px;
+        gap: 2vh;
+        padding: 2vw;
+    }
+    .modos_chat h2{
+        color: white;
+        font-size: 18px;
+    }
+    .modos_chat input[type="radio"]{
+        display: none;
+    }
+    .modos_chat label{
+        align-items: center;
+        text-align: center;
+        display: grid;
+        width: 100%;
+        border: 2px solid rgb(138, 78, 190);
+        border-radius: 10px;
+        padding: 2vh 0;
+        color: white;
+    }
+    
+    .modos_chat input[type="radio"]:checked + label{
+        background-color: rgb(138, 78, 190);
+        color: rgb(15, 3, 26);
+        font-weight: 700;
+    }
+
+    .outras_opcoes{
+        width: 100%;
+    }
+    .outras_opcoes button{
+        margin: 3vh 0 0 2vw;
+        width: 15vw;
+        height: 7vh;
+        font-size: 15px;
+        background-color: rgb(255, 15, 15);
+        border-radius: 10px;
+        border: none;
+        color: rgb(15, 3, 26);
+        font-weight: 700;
+    }
+    /* Opcoes - fim */
+
+    /* conversa e histórico - início */
+    .conteudo_central{
+        display: grid;
+        width: 50vw;
+        background-color: rgb(26, 6, 44);
+        height: 100vh;
+    }
+
+    .historico_chat{
+        width: 92%;
+        padding: 18vh 2vw 15vh 2vw;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .resposta, .pergunta{
+        padding: 4vh;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: rgb(15, 3, 26);
+        font-size: 13px;
+        font-weight: 800;
+        margin-bottom: 5vh;
+    }
+    .resposta{
+        width: fit-content;
+        border-top-right-radius: 10px;
+        background-color: rgb(191, 139, 236);
+        align-self: flex-start;
+    }
+    .pergunta{
+        max-width: 30vw;
+        border-top-left-radius: 10px;
+        background-color: white;
+        align-self: flex-end;
+    }
+    /* conversa e histórico - fim */
+
+    /* input de texto - início */
+    .enviar_pergunta{
+        background-color: rgb(151, 110, 187);
+        padding: 0.5vw;
+        border-radius: 50px;
+    }
+    .mensagem_chat{
+        justify-content: center;
+        display: flex;
+        width: 50vw;
+        bottom: 5vh;
+        position: fixed;
+    }
+    .enviar_pergunta input[type="text"]{
+        margin-left: 1vw;
+        width: 40vw;
+        height: 4vh;
+        background-color: transparent;
+        border: none;
+        font-size: 17px;
+    }
+    .enviar_pergunta input[type="text"]:focus {
+        outline: none;
+    }
+    .enviar_pergunta input[type="submit"]{
+        color: white;
+        font-weight: 800;
+        background-color: rgb(99, 11, 177);
+        border: none;
+        border-radius: 50px;
+        width: 4vw;
+        height: 4vw;
+    }
+    /* input de texto - fim */
+
+/* Conteudo - fim */
